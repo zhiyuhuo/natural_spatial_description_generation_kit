@@ -1,0 +1,6 @@
+function res = get_rot(strangle, dstangle)
+
+res = dstangle - strangle;
+while
+
+end

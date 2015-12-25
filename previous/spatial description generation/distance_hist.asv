@@ -1,0 +1,5 @@
+function res = distance_hist(disthg)
+
+ex1 = sifind(disthg == 0);
+
+end

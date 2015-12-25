@@ -1,0 +1,21 @@
+function res = gibbs_minus(node, feature)
+
+
+res.nameA = feature.nameA;
+res.nameB = feature.nameB;
+
+if (strcmp(res.nameA, 'rotation') == 1)
+
+    res.outdirw = node.outdirw; 
+    res.indirw = min([d(1) - scale1(1), scale1(1)]);
+    res.distw = 0;
+    
+else
+    
+    res.outdirw = min([feature.outdirw, node.outdirw]);
+    res.indirw = min([feature.indirw, node.indirw]);
+    res.distw = min([feature.distw, node.distw]);
+
+end
+
+end

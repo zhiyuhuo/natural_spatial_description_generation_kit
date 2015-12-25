@@ -1,0 +1,8 @@
+function res = get_distance_between_two_entities(ent1, ent2)
+
+vec1 = ent1.vec;
+vec2 = ent2.vec;
+
+for i = 1:size(vec1, )
+
+end

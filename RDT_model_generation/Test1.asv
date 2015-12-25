@@ -1,0 +1,9 @@
+clc;
+clear;
+close all;
+%
+
+numpath = 1;
+numtrip = 3;
+
+route = load(['Route Feature Set\route-' num2str(numpath) '-' num2str(numtrip) '.mat']);

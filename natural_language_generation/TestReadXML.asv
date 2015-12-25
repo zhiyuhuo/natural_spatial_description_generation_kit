@@ -1,0 +1,10 @@
+clc;
+clear;
+close all;
+%
+
+chunknamedic = {'FURRP','FURTP','IRMRP','OBTP','ORMRP','ORMTP'};
+
+DOMnode = xmlread('149template.xml');
+root = DOMnode
+

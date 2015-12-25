@@ -1,0 +1,25 @@
+clc;
+clear;
+close all;
+%
+
+distset = [];
+rotset = [];
+
+for np = 1:10
+    for nt = 3:7
+        numpath = np;
+        numtrip = nt;
+        footprint = load(['Footprint Set\footprint-' num2str(numpath) '-' num2str(numtrip) '.mat']);
+        path = footprint.footprint;
+        l = 1;
+        startnode = path(l)
+        while l < length(path)
+            l = l + 1;
+            if path{l}{3} == 1
+                dist = path{4}{2}
+            end
+        end
+    end
+end
+

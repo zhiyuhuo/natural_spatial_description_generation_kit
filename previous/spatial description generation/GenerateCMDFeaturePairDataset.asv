@@ -1,0 +1,94 @@
+clc;
+clear;
+close all;
+%
+
+lib = load('features.mat');
+lib = lib.lib;
+
+vocabulary = load('vocab_cmd_sp.mat');
+cmdset = vocabulary.vocabulary.cmd;
+cmdtrialdataset = {};
+
+for i = 1:length(cmdset)
+    sampleset = {};
+    for j = 1:length(lib)
+        trial = lib{j};
+        cmd = trial{1};
+        cmdstr = [cmd{1} '_' cmd{2} '_' cmd{3} '_' cmd{4} '_' cmd{5}];
+        samples = trial{2};
+        labels = trial{3};
+        if strcmp(cmdset{i}, cmdstr) == 1
+            for k = 1:length(samples);
+                sample = {samples{k}, labels(k)};
+                sampleset{end+1} = sample;
+            end
+        end
+    end
+    cmdtrialdataset{end+1} = {cmdstr, sampleset};
+end
+
+cmdfeaturesnameset = {};
+for i = 1:length(cmdtrialdataset)
+    cmdstr = cmdtrialdataset{i}{1};
+    cmdtrialdata = cmdtrialdataset{i}{2};
+    nameset = {};
+    for j = 1:length(cmdtrialdata)
+        featureset = cmdtrialdata{j};
+        features = featureset{1};
+        lb = featureset{2};
+        for k = 1:length(features)
+            feature = features{k};
+            name = [feature.nameA '_' feature.nameB];
+            nameset{end+1} = name;
+        end
+    end
+    
+    nameset = unique(nameset);
+    cmdfeaturesnameset{end+1} = {cmdstr, nameset};
+end
+
+cmdfeaturenodes = {};
+for i = 1:length(cmdfeaturesnameset)
+    cmdstr = cmdfeaturesnameset{i}{1};
+    nameset = cmdfeaturesnameset{i}{2};
+    nodes = containers.Map();
+    for j = 1:length(nameset)
+        nodes(nameset{j}) = {};
+    end
+    cmdfeaturenodes{end+1} = {cmdstr, nodes};
+end
+
+for i = 1:length(cmdtrialdataset)
+    cmdstr = cmdtrialdataset{i}{1};
+    cmdtrialdata = cmdtrialdataset{i}{2};
+    featurenodes = cmdfeaturenodes{i};
+    nodes = featurenodes{2};
+    for j = 1:length(cmdtrialdata)
+        featureset = cmdtrialdata{j};
+        features = featureset{1};
+        lb = featureset{2};
+        for k = 1:length(features)
+            feature = features{k};
+            name = [feature.nameA '_' feature.nameB];
+            nodesnames = keys(nodes);
+            if lb > 0
+                if isempty(find(strcmp(nodesnames, name) == 1))
+                    nodes(name) = {feature, [1 0.25]};
+                else
+                    
+                end
+            else
+                if isempty(find(strcmp(nodesnames, name) == 1))
+                    % do nothing
+                else
+                    
+                end 
+            end
+        end
+    end
+end
+
+
+
+

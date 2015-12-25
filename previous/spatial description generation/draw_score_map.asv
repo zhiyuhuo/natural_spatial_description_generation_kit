@@ -1,0 +1,27 @@
+function res = draw_score_map(poseset, scoreset)
+
+map = zeros(500, 500, 3);
+dirset = [1 0; 1 -1; 0 -1; -1 -1; -1 0; -1 1; 0 1; 1 1];
+for i = 1:length(scoreset)
+
+    pose = poseset(i,:);
+    score = scoreset(i);
+    
+    x = pose(1);
+    y = pose(2);
+    th = pose(3);
+    
+    xi = x / 0.04 + 250;
+    yi = 250 - y / 0.04;
+    
+    map(yi-2:yi+2, xi-2:xi+2, 1) = 255;
+    thi = th / (pi/4);
+    map(yi + 1*dirset(thi,2), xi + 1*dirset(thi,1), 3) = 255;
+    map(yi + 1*dirset(thi,2), xi + 1*dirset(thi,1), 3) = 255;
+    map(yi + 2*dirset(thi,2), xi + 2*dirset(thi,1), 3) = 255;
+    
+end
+
+imshow(map);
+
+end

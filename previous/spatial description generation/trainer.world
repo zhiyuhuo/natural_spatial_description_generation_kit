@@ -1,0 +1,212 @@
+define smalltable model
+(
+  size [ 0.500 0.500 0.550 ]
+  gui_nose 0
+)
+
+define chair model
+(
+  size [ 0.450 0.450 0.500 ]
+  gui_nose 0
+)
+
+define dinnertable model
+(
+  size [ 0.700 1.400 0.700 ]
+  gui_nose 0
+)
+
+define desk model
+(
+  size [ 0.800 1.200 0.800 ]
+  gui_nose 0
+)
+
+define couch model
+(
+  size [ 0.600 2.000 0.500 ]
+  gui_nose 0
+)
+
+define bed model
+(
+  size [ 2.000 1.200 0.500 ]
+  gui_nose 0
+)
+
+define robotframe model
+(
+  size [ 0.100 0.100 1.000 ]
+  gui_nose 0
+)
+
+define topurg ranger
+(
+  sensor( 			
+    range [ 0.5  2.5 ]
+    fov 45.00
+   samples 90
+  )
+
+  # generic model properties
+  color "black"
+  size [ 0.050 0.050 0.100 ]
+)
+
+define erratic position
+(
+  #size [ 0.415 0.392 0.25 ]
+  size [ 0.350 0.350 0.250 ]
+  origin [ -0.050 0.000 0.000 0.000 ]
+  gui_nose 1
+  drive "diff"
+  topurg(pose [ 0.000 0.000 0.200 0.000 ])
+  robotframe(pose [ 0.075 0.000 0.000 0.000 ] color "blue")
+)
+
+define floorplan model
+(
+  # sombre, sensible, artistic
+  color "gray30"
+
+  # most maps will need a bounding box
+  boundary 1
+
+  gui_nose 0
+  gui_grid 0
+
+  gui_outline 0
+  gripper_return 0
+  fiducial_return 0
+  laser_return 1
+)
+
+# set the resolution of the underlying raytrace model in meters
+resolution 0.02
+
+interval_sim 100  # simulation timestep in milliseconds
+
+
+window
+( 
+  size [ 800 800 ] 
+
+  rotate [ 0.000 0.000 ]
+  scale 21.642 
+)
+
+# load an environment bitmap
+floorplan
+( 
+  name "trainer"
+  bitmap "trainer.bmp"
+  size [ 20.000 20.000 1.000 ]
+  pose [ 0.000 0.000 0.000 0.000 ]
+)
+
+# throw in a robot
+
+#robot
+erratic( pose [ 0.000 0.000 0.000 0.000 ] name "era" color "blue") 
+#erratic( pose [ 2.500 0.000 0.000 0.000 ] name "era" color "blue") 
+#erratic( pose [ -1.000 4.500 0.000 90.000 ] name "era" color "blue")
+#erratic( pose [ -2.500 2.000 0.000 90.000 ] name "era" color "blue")
+#erratic( pose [ 2.500 2.000 0.000 270.000 ] name "era" color "blue")
+#erratic( pose [ 2.300 0.000 0.000 45.000 ] name "era" color "blue")
+
+# bedroom
+smalltable( pose [ 6.500 5.000 0.000 -1.000 ] name "table" color "yellow" ranger_return 101)
+chair( pose [ 6.500 5.600 0.000 180.000 ] name "chair" color "red" ranger_return 102)
+chair( pose [ 6.500 4.400 0.000 180.000 ] name "chair" color "red" ranger_return 103)
+
+smalltable( pose [ 1.000 2.000 0.000 -1.000 ] name "table" color "yellow" ranger_return 104)
+smalltable( pose [ -1.000 2.000 0.000 -1.000 ] name "table" color "yellow" ranger_return 105)
+bed( pose [ 0.000 2.500 0.000 90.000 ] name "bed" color "green" ranger_return 106)
+
+chair( pose [ 0.000 7.000 0.000 0.000 ] name "chair" color "red" ranger_return 107)
+desk( pose [ 0.800 7.000 0.000 0.000 ] name "table" color "yellow" ranger_return 108)
+
+# living room
+smalltable( pose [ -0.500 -5.000 0.000 -1.000 ] name "table" color "yellow" ranger_return 109)
+smalltable( pose [ -1.500 -6.500 0.000 -1.000 ] name "table" color "yellow" ranger_return 110)
+smalltable( pose [ -1.500 -3.500 0.000 -1.000 ] name "table" color "yellow" ranger_return 117)
+couch( pose [ -1.500 -5.000 0.000 0.000 ] name "couch" color "red" ranger_return 111)
+
+chair( pose [ 0.700 -2.000 0.000 180.000 ] name "chair" color "red" ranger_return 112)
+chair( pose [ -1.700 -2.000 0.000 0.000 ] name "chair" color "red" ranger_return 113)
+dinnertable( pose [ -0.500 -2.000 0.000 270.000 ] name "table" color "yellow" ranger_return 114)
+
+chair( pose [ 1.500 -6.400 0.000 270.000 ] name "chair" color "red" ranger_return 115)
+desk( pose [ 1.500 -7.200 0.000 270.000 ] name "table" color "yellow" ranger_return 116)
+
+################################training assessment###################################
+###   move front non
+# erratic( pose [ 2.000 2.500 0.000 0.000 ] name "era" color "blue") 
+# erratic( pose [ 3.000 2.000 0.000 90.000 ] name "era" color "blue") 
+# erratic( pose [ 2.000 -3.000 0.000 225.000 ] name "era" color "blue") 
+
+###   move left non
+# erratic( pose [ 2.000 2.500 0.000 0.000 ] name "era" color "blue") 
+# erratic( pose [ 3.000 2.000 0.000 90.000 ] name "era" color "blue") 
+# erratic( pose [ 2.000 -3.000 0.000 225.000 ] name "era" color "blue") 
+
+###   move right non
+# erratic( pose [ 2.000 2.500 0.000 0.000 ] name "era" color "blue") 
+# erratic( pose [ 3.000 2.000 0.000 90.000 ] name "era" color "blue") 
+# erratic( pose [ 2.000 -3.000 0.000 225.000 ] name "era" color "blue") 
+
+###   robot left table
+# erratic( pose [ 2.500 2.000 0.000 90.000 ] name "era" color "blue") 
+# erratic( pose [ 1.500 -4.500 0.000 90.000 ] name "era" color "blue") 
+# erratic( pose [ 1.000 5.000 0.000 0.000 ] name "era" color "blue") 
+
+###   robot right table
+# erratic( pose [ 5.000 5.000 0.000 90.000 ] name "era" color "blue") 
+# erratic( pose [ 0.000 -7.000 0.000 270.000 ] name "era" color "blue") 
+# erratic( pose [ 2.500 6.500 0.000 270.000 ] name "era" color "blue") 
+
+###   bed left table
+# erratic( pose [ -1.000 4.000 0.000 270.000 ] name "era" color "blue") 
+# erratic( pose [ -1.7500 2.000 0.000 180.000 ] name "era" color "blue") 
+# erratic( pose [ -1.500 3.000 0.000 0.000 ] name "era" color "blue") 
+
+###   bed right table
+# erratic( pose [ 2.500 2.500 0.000 90.000 ] name "era" color "blue") 
+# erratic( pose [ 1.500 4.000 0.000 225.000 ] name "era" color "blue") 
+# erratic( pose [ 2.500 1.500 0.000 180.000 ] name "era" color "blue") 
+
+###   couch front table
+# erratic( pose [ -1.000 -3.000 0.000 270.000 ] name "era" color "blue") 
+# erratic( pose [ 1.000 -4.000 0.000 225.000 ] name "era" color "blue") 
+# erratic( pose [ -0.500 -6.500 0.000 90.000 ] name "era" color "blue") 
+
+###   couch right table
+# erratic( pose [ 0.000 -6.000 0.000 210.000 ] name "era" color "blue") 
+# erratic( pose [ 0.250 -7.000 0.000 160.000 ] name "era" color "blue") 
+# erratic( pose [ -0.250 -7.400 0.000 90.000 ] name "era" color "blue") 
+
+###   chair beside table
+# erratic( pose [ 0.000 -7.000 0.000 90.000 ] name "era" color "blue") 
+# erratic( pose [ 0.250 -4.000 0.000 180.000 ] name "era" color "blue") 
+# erratic( pose [ 4.000 5.000 0.000 0.000 ] name "era" color "blue") 
+
+###   room center non
+# erratic( pose [ 2.5 2.000 0.000 90.000 ] name "era" color "blue") 
+# erratic( pose [ -1.000 5.000 0.000 0.000 ] name "era" color "blue") 
+# erratic( pose [ 2.000 -2.000 0.000 260.000 ] name "era" color "blue") 
+
+###   wall front non
+# erratic( pose [ 2.000 5.000 0.000 180.000 ] name "era" color "blue") 
+# erratic( pose [ 3.000 5.000 0.000 0.000 ] name "era" color "blue") 
+# erratic( pose [ 0.50 -4.000 0.000 270.000 ] name "era" color "blue") 
+
+
+
+
+
+
+
+
+
+
+

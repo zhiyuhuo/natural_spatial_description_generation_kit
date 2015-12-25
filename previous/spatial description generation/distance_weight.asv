@@ -1,0 +1,16 @@
+function res = distance_weight(disthg)
+
+distw = [0 0 0 0];
+distw(1) = disthg(1);
+
+for i = 2:20
+    distw(1) = distw(1) + disthg(i) * Gaussian(10, 5, i);
+    distw(2) = distw(2) + disthg(i) * Gaussian(30, 5, i);
+    distw(3) = distw(3) + disthg(i) * Gaussian(60, 10, i);
+end
+
+
+res = [ex1 ex2 ex3 ex4];
+
+
+end
