@@ -5,11 +5,11 @@ close all;
 
 [num,txt,raw] = xlsread('raw_dataset.xlsx');
 
-chunkname = txt(2:size(txt, 1),2);   
+chunknamelist = txt(2:size(txt, 1),2);   
 rawchunkcontent = txt(2:end,3);
 rawrdt = txt(2:end, 4:8);
-chunkcontent = cell(size(rawrdt,1),1);
-chunkrdt = cell(size(rawrdt,1),1);
+chunkcontentlist = cell(size(rawrdt,1),1);
+chunkrdtlist = cell(size(rawrdt,1),1);
 
 %get content
 for i = 1:size(rawchunkcontent, 1)
@@ -31,7 +31,7 @@ for i = 1:size(rawchunkcontent, 1)
         content = [content ' ' sent{k}];
     end
     content = content(2:end);
-    chunkcontent{i} = content;
+    chunkcontentlist{i} = content;
 end
 
 %get rdt
@@ -43,15 +43,21 @@ for i = 1:size(rawrdt, 1)
         end
     end
     if strcmp(cmd(1),'non') == 0
-        chunkrdt{i,1} = cmd{1};
+        chunkrdtlist{i,1} = cmd{1};
     elseif strcmp(cmd(2),'non') == 0
-        chunkrdt{i,1} = cmd{2};
+        chunkrdtlist{i,1} = cmd{2};
     else
-        chunkrdt{i,1} = [cmd{3} '_' cmd{4} '_' cmd{5}];
+        chunkrdtlist{i,1} = [cmd{3} '_' cmd{4} '_' cmd{5}];
     end
 end
 
-tagdic = unique(chunkname);
+chunknamedic = unique(chunknamelist);
+
+data.chunknamedic = chunknamedic;
+data.chunknamelist = chunknamelist;
+data.chunkcontentlist = chunkcontentlist;
+data.chunkrdtlist = chunkrdtlist;
+save('xls_data.mat', 'data');
 
 
 

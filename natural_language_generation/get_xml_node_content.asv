@@ -1,0 +1,11 @@
+function res = get_xml_node_content(childnodes)
+
+for n = 0 : childnodes.getLength-1  
+    childnodename = childnodes.item(n).getNodeName;
+    if length(childnodename) <= 3
+        childnodetext = childnodes.item(n).getChildNodes.G
+    end
+end
+        
+res = '';
+end

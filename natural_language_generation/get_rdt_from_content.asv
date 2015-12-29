@@ -1,0 +1,6 @@
+function res = get_rdt_from_content(chunkname, chunkcontent, namelist, contentlist, rdtlist)
+
+s1 = find(strcmp(namelist, chunkname) == 1);
+s2 = find(strcmp(namelist, ))
+
+end
