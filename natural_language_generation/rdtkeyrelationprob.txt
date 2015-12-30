@@ -1,0 +1,155 @@
+bed_left_non-non_non_table: 0  1  0  0  0  0
+bed_right_non-non_non_table: 0  1  0  0  0  0
+bedroom-bedroom: 0         0.5         0.5           0           0           0
+bedroom-monitor: 0  1  0  0  0  0
+bedroom-mug: 0  1  0  0  0  0
+bedroom-non_non_non: 0  1  0  0  0  0
+bedroom-non_non_table: 0  0  0  0  1  0
+bedroom-robot_left_non: 0  0  0  0  1  0
+bedroom-room_center_non: 0  0  0  0  0  1
+bedroom-room_right_non: 0  0  0  0  1  0
+bedroom-statue: 0  1  0  0  0  0
+bedroom-wall_beside_non: 0  0  0  0  1  0
+bedroom-wall_left_non: 0  0  0  0  1  0
+chair_beside_non-non_non_table: 0  1  0  0  0  0
+chair_beside_non-room_back_non: 0  0  0  0  0  1
+chair_beside_non-room_right_non: 0           0           0           0     0.33333     0.66667
+chair_beside_non-wall_back_non: 0  0  0  0  0  1
+chair_beside_non-wall_beside_non: 0  0  0  0  0  1
+chair_beside_non-wall_right_non: 0  0  0  0  1  0
+couch_back_non-non_non_table: 0  1  0  0  0  0
+couch_back_non-robot_right_non: 0  0  0  0  0  1
+couch_front_non-non_non_table: 0  1  0  0  0  0
+couch_front_non-robot_right_non: 0  0  0  0  0  1
+fork-living room: 0  0  1  0  0  0
+fork-non_non_non: 0           0         0.8           0           0         0.2
+fork-non_non_table: 0  0  1  0  0  0
+fork-robot_right_non: 0  0  1  0  0  0
+glasses case-living room: 0  0  1  0  0  0
+glasses case-move_right_non: 0  0  0  0  0  1
+glasses case-non_non_non: 0  0  1  0  0  0
+glasses case-non_non_table: 0  0  1  0  0  0
+glasses case-robot_right_non: 0  0  1  0  0  0
+glasses case-room_center_non: 0  0  1  0  0  0
+glasses case-room_right_non: 0  0  1  0  0  0
+laptop-living room: 0  0  1  0  0  0
+laptop-non_non_non: 0  0  1  0  0  0
+laptop-non_non_table: 0  0  1  0  0  0
+laptop-room_back_non: 0  0  1  0  0  0
+living room-fork: 0  1  0  0  0  0
+living room-glasses case: 0         0.8           0           0         0.2           0
+living room-laptop: 0  1  0  0  0  0
+living room-living room: 0         0.5         0.5           0           0           0
+living room-move_front_non: 0  0  0  0  1  0
+living room-non_non_non: 0.072727     0.92727           0           0           0           0
+living room-non_non_table: 0  0  0  0  1  0
+living room-robot_right_non: 0  0  0  0  1  0
+living room-room_back_non: 0  0  0  0  1  0
+living room-room_right_non: 0  0  0  0  1  0
+monitor-bedroom: 0  0  1  0  0  0
+monitor-non_non_non: 0  0  1  0  0  0
+monitor-non_non_table: 0  0  1  0  0  0
+monitor-room_center_non: 0  0  0  0  0  1
+monitor-wall_left_non: 0  0  1  0  0  0
+move_front_non-living room: 0  0  0  0  0  1
+move_front_non-move_right_non: 0  0  0  0  0  1
+move_front_non-non_non_non: 0  0  0  0  0  1
+move_front_non-non_non_table: 1  0  0  0  0  0
+move_right_non-move_front_non: 0  0  0  0  1  0
+move_right_non-non_non_table: 0  0  0  0  1  0
+mug-bedroom: 0  0  1  0  0  0
+mug-non_non_non: 0  0  1  0  0  0
+mug-non_non_table: 0  0  1  0  0  0
+mug-room_right_non: 0  0  1  0  0  0
+mug-wall_beside_non: 0  0  1  0  0  0
+mug-wall_right_non: 0  0  1  0  0  0
+non_non_non-: 0  0  0  0  1  0
+non_non_non-bedroom: 0  0  1  0  0  0
+non_non_non-fork: 0         0.8           0           0         0.2           0
+non_non_non-glasses case: 0  1  0  0  0  0
+non_non_non-laptop: 0  1  0  0  0  0
+non_non_non-living room: 0           0     0.92727    0.072727           0           0
+non_non_non-monitor: 0  1  0  0  0  0
+non_non_non-move_front_non: 0  0  0  0  1  0
+non_non_non-mug: 0  1  0  0  0  0
+non_non_non-non_non_non: 0  0  0  0  0  1
+non_non_non-non_non_table: 0  0  0  0  1  0
+non_non_non-robot_left_non: 0  0  0  0  1  0
+non_non_non-robot_right_non: 0  0  0  0  1  0
+non_non_non-room_back_non: 0  0  0  0  1  0
+non_non_non-room_center_non: 0  0  0  0  1  0
+non_non_non-room_right_non: 0  0  0  0  1  0
+non_non_non-statue: 0     0.66667           0           0     0.33333           0
+non_non_non-wall_left_non: 0  0  0  0  1  0
+non_non_non-wall_right_non: 0  0  0  0  1  0
+non_non_table-bed_left_non: 0  0  1  0  0  0
+non_non_table-bed_right_non: 0  0  1  0  0  0
+non_non_table-bedroom: 0  0  0  0  0  1
+non_non_table-chair_beside_non: 0  0  1  0  0  0
+non_non_table-couch_back_non: 0  0  1  0  0  0
+non_non_table-couch_front_non: 0  0  1  0  0  0
+non_non_table-fork: 0  1  0  0  0  0
+non_non_table-glasses case: 0  1  0  0  0  0
+non_non_table-laptop: 0  1  0  0  0  0
+non_non_table-living room: 0  0  0  0  0  1
+non_non_table-monitor: 0  1  0  0  0  0
+non_non_table-move_front_non: 0  0  0  1  0  0
+non_non_table-move_right_non: 0  0  0  0  0  1
+non_non_table-mug: 0  1  0  0  0  0
+non_non_table-non_non_non: 0  0  0  0  0  1
+non_non_table-robot_left_non: 0  0  1  0  0  0
+non_non_table-robot_right_non: 0           0     0.80769           0           0     0.19231
+non_non_table-room_back_non: 0           0     0.66667           0           0     0.33333
+non_non_table-room_right_non: 0           0     0.85714           0           0     0.14286
+non_non_table-statue: 0  1  0  0  0  0
+non_non_table-wall_back_non: 0  0  1  0  0  0
+non_non_table-wall_beside_non: 0  0  1  0  0  0
+non_non_table-wall_left_non: 0  0  1  0  0  0
+non_non_table-wall_right_non: 0  0  1  0  0  0
+robot_left_non-bedroom: 0  0  0  0  0  1
+robot_left_non-non_non_non: 0  0  0  0  0  1
+robot_left_non-non_non_table: 0  1  0  0  0  0
+robot_left_non-statue: 0  1  0  0  0  0
+robot_right_non-couch_back_non: 0  0  0  0  1  0
+robot_right_non-couch_front_non: 0  0  0  0  1  0
+robot_right_non-fork: 0  1  0  0  0  0
+robot_right_non-glasses case: 0  1  0  0  0  0
+robot_right_non-living room: 0  0  0  0  0  1
+robot_right_non-non_non_non: 0  0  0  0  0  1
+robot_right_non-non_non_table: 0     0.80769           0           0     0.19231           0
+robot_right_non-room_center_non: 0  0  0  0  0  1
+room_back_non-chair_beside_non: 0  0  0  0  1  0
+room_back_non-laptop: 0  1  0  0  0  0
+room_back_non-living room: 0  0  0  0  0  1
+room_back_non-non_non_non: 0  0  0  0  0  1
+room_back_non-non_non_table: 0     0.66667           0           0     0.33333           0
+room_center_non-glasses case: 0  1  0  0  0  0
+room_center_non-monitor: 0  0  0  0  1  0
+room_center_non-move_left_non: 0  0  0  0  1  0
+room_center_non-non_non_non: 0  0  0  0  0  1
+room_center_non-robot_right_non: 0  0  0  0  1  0
+room_right_non-bedroom: 0  0  0  0  0  1
+room_right_non-chair_beside_non: 0           0           0           0     0.66667     0.33333
+room_right_non-glasses case: 0  1  0  0  0  0
+room_right_non-living room: 0  0  0  0  0  1
+room_right_non-mug: 0  1  0  0  0  0
+room_right_non-non_non_non: 0  0  0  0  0  1
+room_right_non-non_non_table: 0     0.85714           0           0     0.14286           0
+statue-bedroom: 0  0  1  0  0  0
+statue-non_non_non: 0           0     0.66667           0           0     0.33333
+statue-non_non_table: 0  0  1  0  0  0
+statue-robot_left_non: 0  0  1  0  0  0
+wall_back_non-chair_beside_non: 0  0  0  0  1  0
+wall_back_non-non_non_table: 0  1  0  0  0  0
+wall_beside_non-chair_beside_non: 0  0  0  0  1  0
+wall_beside_non-move_left_non: 0  0  0  0  0  1
+wall_beside_non-mug: 0  1  0  0  0  0
+wall_beside_non-non_non_table: 0  1  0  0  0  0
+wall_left_non-bedroom: 0  0  0  0  0  1
+wall_left_non-monitor: 0  1  0  0  0  0
+wall_left_non-non_non_non: 0  0  0  0  0  1
+wall_left_non-non_non_table: 0  1  0  0  0  0
+wall_right_non-chair_beside_non: 0  0  0  0  0  1
+wall_right_non-mug: 0  1  0  0  0  0
+wall_right_non-non_non_non: 0  0  0  0  0  1
+wall_right_non-non_non_table: 0  1  0  0  0  0

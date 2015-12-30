@@ -49,10 +49,11 @@ for n = 1:length(chunknamedic)
         end
         
         %   5
-        siblingleftnodeName = IDArray.item(i).getPreviousSibling.getNodeName;
+        siblingleftnodeName = IDArray.item(i).getPreviousSibling.getPreviousSibling.getNodeName;
+        if 
         for n1 = 1:length(chunknamedic)
             if strcmp(siblingleftnodeName,chunknamedic{n1}) == 1
-                subchildnodes = IDArray.item(i).getPreviousSibling.getChildNodes;
+                subchildnodes = IDArray.item(i).getPreviousSibling.getPreviousSibling.getChildNodes;
                 text1 = get_xml_node_content(subchildnodes);
                 rdt1 = get_rdt_from_content(childnodename, text1, chunknamelist, chunkcontentlist, chunkrdtlist);
 %                 mx(n, n1, 5) = mx(n, n1, 5) + 1;
@@ -61,10 +62,10 @@ for n = 1:length(chunknamedic)
         end
         
         %   6
-        siblingrightnodeName = IDArray.item(i).getNextSibling.getNodeName;
+        siblingrightnodeName = IDArray.item(i).getNextSibling.getNextSibling.getNodeName;
         for n1 = 1:length(chunknamedic)
             if strcmp(siblingrightnodeName,chunknamedic{n1}) == 1
-                subchildnodes = IDArray.item(i).getPreviousSibling.getChildNodes;
+                subchildnodes = IDArray.item(i).getNextSibling.getNextSibling.getChildNodes;
                 text1 = get_xml_node_content(subchildnodes);
                 rdt1 = get_rdt_from_content(childnodename, text1, chunknamelist, chunkcontentlist, chunkrdtlist);
 %                 mx(n, n1, 6) = mx(n, n1, 6) + 1;
@@ -76,9 +77,6 @@ end
 
 save('rdtpairlist.mat', 'rdtpairlist');
 
-for n = 1:length(rdtpairlist)
-    rdtpair = rdtpairlist
-end
 
 
 

@@ -1,6 +1,24 @@
 function res = get_rdt_from_content(chunkname, chunkcontent, namelist, contentlist, rdtlist)
 
 s1 = find(strcmp(namelist, chunkname) == 1);
-s2 = find(strcmp(namelist, ))
+s2 = find(strcmp(contentlist, chunkcontent) == 1);
+
+scorelist = zeros(length(contentlist))
+for i = 1:length(contentlist)
+    score = levenshtein(chunkcontent, contentlist{i});
+    
+end
+
+s = intersect(s1, s2);
+if strcmp(chunkname, '#text') == 1
+    s = s2;
+end
+
+if ~isempty(s)
+    srdt = rdtlist{s};
+    res = srdt;
+else
+    res = '';
+end
 
 end
