@@ -27,14 +27,14 @@ for n = 1:length(chunknamedic)
                         mx(n, n1, 2) = mx(n, n1, 2) + 1;
                         mx(n1, n, 3) = mx(n1, n, 3) + 1;
                         
-                        namepairlist{end+1} = {nodename, childnodename, 'parent_right'};
-                        namepairlist{end+1} = {childnodename, nodename, 'child_left'};
+                        namepairlist{end+1} = {nodename, childnodeName, 'parent_right'};
+                        namepairlist{end+1} = {childnodeName, nodename, 'child_left'};
                     else
                         mx(n, n1, 1) = mx(n, n1, 1) + 1;
                         mx(n1, n, 4) = mx(n1, n, 4) + 1;     
                         
-                        namepairlist{end+1} = {nodename, childnodename, 'parent_left'};
-                        namepairlist{end+1} = {childnodename, nodename, 'child_right'};
+                        namepairlist{end+1} = {nodename, childnodeName, 'parent_left'};
+                        namepairlist{end+1} = {childnodeName, nodename, 'child_right'};
                     end
                 end
             end
@@ -60,7 +60,7 @@ for n = 1:length(chunknamedic)
     end 
 end
 
-save('namepairlist.mat', 'namepairlist');
+save()
 
 
 
