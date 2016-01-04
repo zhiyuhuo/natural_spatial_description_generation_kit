@@ -1,0 +1,8 @@
+%
+clc;
+clear;
+close all;
+%
+
+data = load('xls_data.mat');
+data = data.data
