@@ -10,7 +10,7 @@ chunknamedic = data.chunknamedic;
 %relation types A to B
 relationtypes = {'parent_left', 'parent_right', 'child_left', 'child_right', 'sibling-left', 'sibliing-right'};
 mx = zeros(length(chunknamedic), length(chunknamedic), length(relationtypes));
-xmlDoc = xmlread('149template.xml');
+xmlDoc = xmlread('static_descriptions.xml');
 namepairlist = {};
 
 for n = 1:length(chunknamedic)

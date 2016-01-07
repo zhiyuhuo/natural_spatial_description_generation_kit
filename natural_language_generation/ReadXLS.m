@@ -4,6 +4,12 @@ close all;
 %
 
 [num,txt,raw] = xlsread('raw_dataset.xlsx');
+stid = load('st_id.mat');
+stid = stid.st;
+
+%get the static decriptions only
+validid = find(ismember(num, stid));
+txt = txt(validid, :);
 
 chunknamelist = txt(2:size(txt, 1),2);   
 rawchunkcontent = txt(2:end,3);

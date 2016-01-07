@@ -13,7 +13,7 @@ chunkrdtlist = data.chunkrdtlist;
 %relation types A to B
 relationtypes = {'parent_left', 'parent_right', 'child_left', 'child_right', 'sibling_left', 'sibliing_right'};
 mx = zeros(length(chunkrdtlist), length(chunkrdtlist), length(relationtypes));
-xmlDoc = xmlread('149template.xml');
+xmlDoc = xmlread('static_descriptions.xml');
 
 rdtpairlist = {};
 
